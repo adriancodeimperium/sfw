@@ -2,7 +2,7 @@
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source ${SCRIPT_DIR}/../includes/io.sh
+source "${SCRIPT_DIR}/../includes/io.sh"
 
 DEBUG=false
 
@@ -65,7 +65,7 @@ then
     exit 1
 fi
 
-mkdir ${PROJECT_NAME}
+mkdir "${PROJECT_NAME}"
 cp -r "${SFW_BASE_DIR}/includes" "${PROJECT_NAME}/includes"
 cp "${SFW_BASE_DIR}/templates/${TEMPLATE}.sh" "${PROJECT_NAME}/${PROJECT_NAME}.sh"
 chmod +x "${PROJECT_NAME}/${PROJECT_NAME}.sh"
